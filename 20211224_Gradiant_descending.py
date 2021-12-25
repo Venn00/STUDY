@@ -14,8 +14,8 @@ x = np.arange(-10,10,0.1)
 y = f(x)
 init = -6 # 초기값.
 
-ax.set_xlim(min(x),max(x))
-ax.set_ylim(min(y),max(y))
+ax.set_xlim(min(x)-2, max(x)+2)
+ax.set_ylim(min(y)-2, max(y)+2)
 plt.plot(x,y)
 
 line, = plt.plot([], [], 'bo')
@@ -25,7 +25,6 @@ x, y = [init], [f(init)]
 line2, = plt.plot(x,y,'ro')
 
 def update(frame):
-    print(x[-1])
     xx = x[-1] - df_f(x[-1]) * 0.01
     yy = f(xx)
     line2.set_data(xx,yy)

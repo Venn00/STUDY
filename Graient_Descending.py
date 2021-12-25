@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 def make_linear(w=0.5, b=0.8, size=50, noise=1.0):
     x = np.random.rand(size)
     y = w * x + b
-    noise = np.random.uniform(-abs(noise), abs(noise), size=y.shape)
+    noise = np.random.uniform(-abs(noise), abs(noise), size=y.shape) * 4
     yy = y + noise
     plt.figure(figsize=(10, 7))
     plt.plot(x, y, color='r', label=f'y = {w}*x + {b}')
