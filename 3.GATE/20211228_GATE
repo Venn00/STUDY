@@ -1,0 +1,43 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import math
+from sympy import symbols, Limit
+
+x1, x2, w11, w12 , w21, w22 , b1 , b2  = symbols('x1, x2, w11, w12 , w21, w22 , b1 , b2 ')
+X = [x1, x2]
+W = [
+    [w11, w12],
+    [w21, w22]]
+
+B = [b1, b2]
+
+F = np.dot(X,W)+ B
+print(F)
+
+# Sigmoid function
+def sigmoid(x):
+    return 1 / (1 + math.exp(-x))
+
+epoch = 10
+
+learning_data = [
+    [0, 0],
+    [0, 1], 
+    [1, 0],
+    [1, 1]
+]
+
+learning_data2 = [0,1,1,0]
+
+inputNum = 2
+layerNum = 2
+inputLayer = np.random.rand(inputNum, layerNum)
+
+
+
+lay = np.dot(learning_data[3],inputLayer)
+
+
+
+print(inputLayer)
+print(lay)
