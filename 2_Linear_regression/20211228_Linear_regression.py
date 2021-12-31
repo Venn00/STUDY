@@ -1,6 +1,5 @@
 # First Order System
-# #Mean Square Error
-import matplotlib 
+# Mean Square Error
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation
@@ -83,6 +82,6 @@ def Linear():
     ax2.scatter(0,0)
 
 Linear()
-ani = FuncAnimation(fig, update,interval=10) # Animation operator
+ani = FuncAnimation(fig, update, interval=10) # Animation operator
 
 plt.show()
