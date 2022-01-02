@@ -45,8 +45,8 @@ def update(N):
     
 # Animation
 
-degreeNum = 25
-ani = FuncAnimation(fig, update,range(1,degreeNum+1),interval=250,repeat=False) # Animation operator
+degreeNum = 30
+ani = FuncAnimation(fig, update,range(1,degreeNum+1,1),interval=250,repeat=False) # Animation operator
 plt.show()
 
 # U, Sigma, V = svd(xArray)
